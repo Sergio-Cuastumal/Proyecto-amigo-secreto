@@ -33,7 +33,7 @@ function sortearAmigo(){
         //alert(`Tu amigo secreto es: ${listaAmigos[posicion]}`);
         document.getElementById('resultado').innerHTML= "Tu amigo secreto es "+listaAmigos[posicion];
         listaHTML.innerHTML='';
-        listaAmigos=[];
+        listaAmigos=[];//
     }else{
         alert('La lista está vacía. Ingrese un nombre válido');
     }
