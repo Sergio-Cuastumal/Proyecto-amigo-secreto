@@ -11,12 +11,12 @@ function agregarAmigo(){
     let amigo = document.getElementById('amigo').value;
     console.log(amigo);
     //evaluar dato valido
-    if(amigo == '' || amigo == parseInt(amigo) ||listaHTML=='' ){
+    if(amigo == parseInt(amigo) ||listaHTML=='' || amigo.trim() === ''){
         alert('Ingrese un nombre válido por favor.');
     }else{
         listaAmigos.push(amigo);
     }
-    //console.log(typeof(amigo));
+    console.log(typeof(amigo));
     //adicionar a la lista de amigos
     console.log(listaAmigos);
     console.log(typeof(listaAmigos.length));//numero
@@ -42,8 +42,9 @@ function sortearAmigo(){
 function posicionAleatoria(limSup){
     return Math.floor(Math.random()*limSup);
 }
+
+
 function mostrarLista(){
-    
     listaHTML.innerHTML = "";//limpiar lista
     console.log(listaHTML);
     for (let i = 0; i < listaAmigos.length; i++) {
